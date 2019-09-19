@@ -19,7 +19,8 @@ def get_fact():
 
 @app.route('/')
 def home():
-    return "FILL ME!"
+    fact = get_fact()
+    return fact
 
 
 if __name__ == "__main__":

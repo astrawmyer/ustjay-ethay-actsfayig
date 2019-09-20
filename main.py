@@ -22,9 +22,9 @@ def home():
     fact = get_fact()
     payload = {'input_text': fact}
     r = requests.post("https://hidden-journey-62459.herokuapp.com/piglatinize/", data=payload)
-    print(r.headers['Content-Type'])
-    print(r.url)
-    return r.text
+    #print(r.headers['Content-Type'])
+    #print(r.url)
+    return r.url
 
 
 if __name__ == "__main__":

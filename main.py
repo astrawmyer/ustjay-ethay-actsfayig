@@ -20,7 +20,10 @@ def get_fact():
 @app.route('/')
 def home():
     fact = get_fact()
-    return fact
+    payload = {'input_text': fact}
+    r = requests.post("https://hidden-journey-62459.herokuapp.com/piglatinize/", data=payload)
+
+    return r.text
 
 
 if __name__ == "__main__":
